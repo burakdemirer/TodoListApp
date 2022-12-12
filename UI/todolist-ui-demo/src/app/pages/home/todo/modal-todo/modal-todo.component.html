@@ -1,0 +1,24 @@
+<div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" id="confirm-modal-title">Update To-do</h4>
+      <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <form [formGroup]="modalTodoForm" #updateTodoForm="ngForm" autocomplete="off" (submit)="save()">
+        <div class="form-group">
+            <label class="bold">Description</label>
+            <input type="text" id="description" class="form-control" formControlName="description">
+        </div>
+      </form>
+
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-success btn-rounded m-1 pull-right" (click)="save()" [disabled]="!updateTodoForm.valid">
+        <i class="fa fa-save"></i> Submit
+      </button> 
+    </div>
+</div>
+  

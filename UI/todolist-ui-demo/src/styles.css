@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.hover-cursor{
+    cursor: pointer;
+}
+
+.renderer-badge {
+    margin-top: 4px !important;
+    min-width: 60px !important;
+}
